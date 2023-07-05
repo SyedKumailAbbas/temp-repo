@@ -2,7 +2,7 @@ import { useState } from "react";
 import {Container, Row,Col} from "react-bootstrap"
 import contactImg from "../assets/img/contact-img.svg"
 import { responsivePropType } from "react-bootstrap/esm/createUtilityClasses";
-export const ContactForm = () =>{
+const ContactForm = () =>{
 
     const fromInitialDetails={
         firstName:"",lastName:"",email:"",phone:"",message:""
@@ -24,7 +24,7 @@ export const ContactForm = () =>{
     const handleSubmit = async(e) =>{
         e.preventDefault();
         setButtonText("Sending...");
-        let response = await fetch("/api/contact",{
+        let response = await fetch("https://dark-pink-fox-yoke.cyclic.app/contact",{
             method:"POST",
             headers:{
                 "Content-type":"application/json;charset=utf-8",

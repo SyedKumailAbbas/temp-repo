@@ -10,7 +10,7 @@ import react, {useEffect} from 'react';
 
 function App() {
   useEffect(()=>{
-    fetch("/api")
+    fetch("https://dark-pink-fox-yoke.cyclic.app/")
     .then((res)=> res.json())
     .then((data)=>{console.log(data)})
   },[])
